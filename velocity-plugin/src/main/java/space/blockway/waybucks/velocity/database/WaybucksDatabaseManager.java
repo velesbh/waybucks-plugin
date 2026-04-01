@@ -41,6 +41,12 @@ public class WaybucksDatabaseManager {
             hikariConfig.addDataSourceProperty("journal_mode", "WAL");
             hikariConfig.setPoolName("Waybucks-SQLite-Pool");
         } else {
+            // Force-load the driver so DriverManager can find it after shading.
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                throw new SQLException("MySQL driver not found on classpath", e);
+            }
             hikariConfig.setDriverClassName("com.mysql.cj.jdbc.Driver");
             String jdbcUrl = String.format(
                     "jdbc:mysql://%s:%d/%s?useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=utf8",

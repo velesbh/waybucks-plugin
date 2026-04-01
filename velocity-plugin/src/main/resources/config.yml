@@ -1,0 +1,56 @@
+# Waybucks — Velocity Plugin Configuration
+# Enzonic LLC | blockway.space
+
+database:
+  type: "sqlite"
+  sqlite-path: "waybucks.db"
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "waybucks"
+    username: "root"
+    password: ""
+    maximum-pool-size: 10
+    minimum-idle: 2
+    connection-timeout: 30000
+    max-lifetime: 1800000
+
+api:
+  enabled: true
+  port: 25581
+  bind: "0.0.0.0"
+  master-key: "CHANGE_ME_NOW_master_key"
+
+currency:
+  name: "Waybuck"
+  name-plural: "Waybucks"
+  symbol: "W$"
+  starting-balance: 100
+  # Maximum a player can hold (-1 = unlimited)
+  max-balance: -1
+
+daily:
+  # Base reward each day
+  base-amount: 50
+  # Extra per streak day (streak * bonus added to base)
+  streak-bonus: 10
+  # Max streak bonus cap (days)
+  streak-cap: 30
+  # Hours between claims (24 = once per day)
+  cooldown-hours: 20
+
+item:
+  # Allow converting balance to physical items (waybucks banknotes)
+  enabled: true
+  # Material used for the item
+  material: "PAPER"
+  # Custom model data (0 = none)
+  custom-model-data: 1001
+  # Name format (supports {amount})
+  name: "<gold><bold>Waybuck Note</bold></gold> <yellow>x{amount}</yellow>"
+
+# blockway-social integration — used to look up player display info
+social:
+  # If true, waybucks will attempt to read bws_players from the same DB
+  # Set to false if using separate databases
+  share-database: true

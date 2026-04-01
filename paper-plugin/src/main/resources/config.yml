@@ -1,0 +1,37 @@
+# Waybucks Paper Plugin Configuration
+# Enzonic LLC | blockway.space
+
+# Must match the server name used in Velocity's velocity.toml
+server-name: "survival"
+
+messages:
+  prefix: "<dark_gray>[</dark_gray><gold><bold>W$</bold></gold><dark_gray>]</dark_gray> "
+  balance: "<yellow>Your balance: <gold><bold>{symbol}{amount}</bold></gold></yellow>"
+  balance-other: "<yellow>{player}'s balance: <gold><bold>{symbol}{amount}</bold></gold></yellow>"
+  set: "<green>Balance set to <gold>{amount}</gold> Waybucks.</green>"
+  add: "<green>+<gold>{amount}</gold> Waybucks added.</green>"
+  take: "<red>-<gold>{amount}</gold> Waybucks removed.</red>"
+  transfer-sent: "<green>Sent <gold>{amount}</gold> Waybucks to <white>{target}</white>.</green>"
+  transfer-received: "<green>You received <gold>{amount}</gold> Waybucks from <white>{sender}</white>.</green>"
+  transfer-insufficient: "<red>You don't have enough Waybucks.</red>"
+  transfer-self: "<red>You can't send Waybucks to yourself.</red>"
+  shop-bought: "<green>Purchased <white>{shop}</white> for <gold>{price}</gold> Waybucks.</green>"
+  shop-no-stock: "<red>This item is out of stock.</red>"
+  shop-max-reached: "<red>You've reached the purchase limit for this item.</red>"
+  shop-insufficient: "<red>You need <gold>{price}</gold> Waybucks to buy this.</red>"
+  shop-disabled: "<red>This shop item is currently unavailable.</red>"
+  daily-claimed: "<green>Daily reward claimed! +<gold>{amount}</gold> Waybucks. Streak: <yellow>{streak}</yellow> days.</green>"
+  daily-cooldown: "<red>Next daily reward in <yellow>{time}</yellow>.</red>"
+  item-converted: "<green>Converted <gold>{amount}</gold> Waybucks into a note.</green>"
+  item-disabled: "<red>Waybucks items are currently disabled.</red>"
+  item-insufficient: "<red>You don't have enough Waybucks.</red>"
+  item-redeemed: "<green>Redeemed a Waybuck Note for <gold>{amount}</gold> Waybucks.</green>"
+  player-not-found: "<red>Player not found.</red>"
+  no-permission: "<red>You don't have permission.</red>"
+  invalid-amount: "<red>Invalid amount.</red>"
+
+gui:
+  shop-title: "<gold><bold>Waybucks Shop</bold></gold>"
+  leaderboard-title: "<gold><bold>Waybucks Leaderboard</bold></gold>"
+  daily-title: "<gold><bold>Daily Reward</bold></gold>"
+  balance-title: "<gold><bold>Your Balance</bold></gold>"

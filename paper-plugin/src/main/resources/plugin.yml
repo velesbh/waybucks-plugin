@@ -1,0 +1,49 @@
+name: WaybucksPaper
+version: 1.0.0
+main: space.blockway.waybucks.paper.WaybucksPaper
+api-version: '1.21'
+description: Waybucks currency system for the Blockway network.
+authors: [Enzonic]
+website: https://blockway.space
+
+commands:
+  waybucks:
+    description: Check your Waybucks balance
+    aliases: [wb, balance, bal]
+    usage: /waybucks [player]
+  waybuckspay:
+    description: Send Waybucks to another player
+    aliases: [wbpay, pay]
+    usage: /waybuckspay <player> <amount>
+  waybucksshop:
+    description: Open the Waybucks shop
+    aliases: [wbshop, shop]
+    usage: /waybucksshop
+  waybucksdaily:
+    description: Claim your daily Waybucks reward
+    aliases: [wbdaily, daily]
+    usage: /waybucksdaily
+  waybucksleaderboard:
+    description: View the Waybucks leaderboard
+    aliases: [wblb, wbleaderboard, baltop]
+    usage: /waybucksleaderboard
+  waybucksitem:
+    description: Convert Waybucks balance to a physical item
+    aliases: [wbitem]
+    usage: /waybucksitem <amount>
+  waybucksadmin:
+    description: Admin commands for Waybucks
+    aliases: [wba, wbadmin]
+    usage: /waybucksadmin <set|add|take|shop|reload> [args...]
+    permission: waybucks.admin
+
+permissions:
+  waybucks.admin:
+    description: Access to all Waybucks admin commands
+    default: op
+  waybucks.use:
+    description: Use Waybucks commands
+    default: true
+  waybucks.item:
+    description: Convert balance to physical items
+    default: true
